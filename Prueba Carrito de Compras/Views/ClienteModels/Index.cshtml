@@ -1,0 +1,65 @@
+﻿@model Prueba_Tecnica_Carrito_de_Compra.Models.ClienteModel
+
+@{
+  ViewData["Title"] = "Index";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body class="container">
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <div class = "container">
+        <div class = "text-center">
+          <a class = "align-content-center">
+            <img src="https://www.clinicasdechile.cl/wp-content/uploads/2018/01/amazon_logo_rgb.jpg" alt="" width="120" height="60">
+          </a>
+          <h2>Iniciar sesión</h2>
+        </div>   
+      </div>
+      <form method = "post" asp-action = "ConsultUser">
+        <div class="mb-3">
+          <label asp-for="Correo" class="form-label">Correo</label>
+          <input asp-for="Correo" type="email" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+          <span asp-validation-for="Correo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+          <label asp-for="Password" class="form-label">Password</label>
+          <input asp-for="Password" type="password" class="form-control" id="exampleInputName"
+            aria-describedby="nameHelp">
+          <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+              <label class="form-check-label" for="form2Example31"> Remember me </label>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+          </div>
+        </div>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a asp-controller="ClienteModels" asp-action="Create">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+

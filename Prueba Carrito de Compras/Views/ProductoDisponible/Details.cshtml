@@ -1,0 +1,110 @@
+﻿@model Prueba_Tecnica_Carrito_de_Compra.Models.ProductoDisponibleModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder fs-3">@Model.Nombre</h1>
+            <p class="lead fs-5 text-white-50 mb-0">Detalle del Producto</p>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col mb-5">
+                <div class="card h-50">
+                    <div>
+                        <img class="card-img-top" src="@Model.Imagen" alt="..." />
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card-body p-4">
+                    <div class="text-center">
+                         <h2 class="fw-bolder">Detalles</h2>
+                    </div>
+                    <div class="text-center text-capitalize fs-5">
+                        <h3>Codigo del Producto: @Model.CodigoProducto</h3>                       
+                        <h3>Unidades Disponibles: @Model.UnidadesDisponibles</h3>
+                        @if(@Model.Descuento){
+                            <h3><span class="text-muted text-decoration-line-through"> $ @Model.PrecioVenta</span> - $ @Model.PrecioCompra</h3>                            
+                        }
+                        else
+                        {
+                            <h3>$ @Model.PrecioVenta</h3>
+                        }
+                            
+                    </div>
+                    <br />
+                    <div class="text-center">
+                        <button button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Comprar
+                            <i class="bi bi-cart3"></i>
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-center">
+                            @Html.ActionLink("Download", "Download", new {url = @Model.Imagen, id = @Model.CodigoProducto});                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title" id="exampleModalLabel">@Model.Nombre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="col mb-5">
+        <div class="card h-100">
+            <img class="card-img-top" src="@Model.Imagen" alt="..." />
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <h5 class="fw-bolder"></h5>
+                        @if(@Model.Descuento){
+                            <h3><span class="text-muted text-decoration-line-through">Valor $ @Model.PrecioVenta</span> - $ @Model.PrecioCompra</h3>                            
+                        }
+                        else
+                        {
+                            <h3>Valor $ @Model.PrecioVenta</h3>
+                        }
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Numero Identificacion</label>
+                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span class="text-danger"></span>
+                </div>
+        </div>
+      </div>
+      <div class="modal-footer align-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn bg-white">
+            @Html.ActionLink("Comprar", "Comprar", new {p = @Model});                                       
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

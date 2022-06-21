@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba Carrito de Compras", "Prueba Carrito de Compras\Prueba Carrito de Compras.csproj", "{1FA9F17F-9945-4AD8-B173-3D15C1B31F97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FA9F17F-9945-4AD8-B173-3D15C1B31F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA9F17F-9945-4AD8-B173-3D15C1B31F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA9F17F-9945-4AD8-B173-3D15C1B31F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA9F17F-9945-4AD8-B173-3D15C1B31F97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EA4EF6F-9534-4E54-A79F-688FB0BF3C56}
+	EndGlobalSection
+EndGlobal

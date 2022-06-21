@@ -1,0 +1,63 @@
+﻿@model Prueba_Tecnica_Carrito_de_Compra.Models.ClienteModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body class="container">
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <h1>Informacion</h1>
+        </div>    
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form method = "post" asp-action = "Create">
+                 <div class="mb-3">
+                    <label asp-for="IdCliente" class="form-label">Numero Identificacion</label>
+                    <input asp-for="IdCliente" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span asp-validation-for="IdCliente" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label">Nombre</label>
+                    <input asp-for="Nombre" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Telefono" class="form-label">Telefono</label>
+                    <input asp-for="Telefono" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Direccion" class="form-label">Direccion</label>
+                    <input asp-for="Direccion" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Correo" class="form-label">Correo</label>
+                    <input asp-for="Correo" type="email" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+               
+           
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
